@@ -1,0 +1,2 @@
+Estudiante {identificacion = "tyu15", nombre = "juan perez", fechaIngreso = 2025-03-06 07:59:37.7403759 UTC, horaSalida = Just 2025-03-06 08:00:19.8455186 UTC}
+Estudiante {identificacion = "gre447", nombre = "lola ruiz", fechaIngreso = 2025-03-06 07:59:18.3582953 UTC, horaSalida = Nothing}
