@@ -12,5 +12,5 @@ Este programa permite gestionar el registro de los estudiantes en una universida
 
 -Buscar estudiantes por su ID estudiantil.
 
--Consultar la permanencia de los estudiantes en la universidad.Práctica 1 - Lenguajes y Paradigmas de Programación
+-Consultar la permanencia de los estudiantes en la universidad.
 
