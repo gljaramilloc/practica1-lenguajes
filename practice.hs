@@ -10,7 +10,7 @@ data Estudiante = Estudiante {
     identificacion :: String,
     nombre :: String,
     fechaIngreso :: UTCTime,
-    fechaEgreso :: Maybe UTCTime  -- Usamos Maybe para representar que el estudiante aún está en la universidad o ya egresó
+    fechaSalida :: Maybe UTCTime  -- Usamos Maybe para representar que el estudiante aún está en la universidad o ya salió
 } deriving (Show, Read)
 
 -- Función para registrar la entrada de un estudiante a la universidad
@@ -19,14 +19,14 @@ registrarIngreso identificacionEstudiante nombreEstudiante tiempo estudiantes =
     Estudiante identificacionEstudiante nombreEstudiante tiempo Nothing : estudiantes
 
 -- Función para registrar la salida de un estudiante de la universidad
-registrarEgreso :: String -> UTCTime -> [Estudiante] -> [Estudiante]
-registrarEgreso identificacionEstudiante tiempo estudiantes =
-    map (\e -> if identificacionEstudiante == identificacion e then e { fechaEgreso = Just tiempo } else e) estudiantes
+registrarSalida :: String -> UTCTime -> [Estudiante] -> [Estudiante]
+registrarSalida identificacionEstudiante tiempo estudiantes =
+    map (\e -> if identificacionEstudiante == identificacion e then e { fechaSalida = Just tiempo } else e) estudiantes
 
 -- Función para buscar un estudiante por su identificación en la universidad
 buscarEstudiante :: String -> [Estudiante] -> Maybe Estudiante
 buscarEstudiante identificacionEstudiante estudiantes =
-    find (\e -> identificacionEstudiante == identificacion e && isNothing (fechaEgreso e)) estudiantes
+    find (\e -> identificacionEstudiante == identificacion e && isNothing (fechaSalida e)) estudiantes
     where
         isNothing Nothing = True
         isNothing _       = False
@@ -61,8 +61,8 @@ cargarEstudiantes = do
 
 -- Función para mostrar la información de un estudiante como cadena de texto
 mostrarEstudiante :: Estudiante -> String
-mostrarEstudiante (Estudiante identificacion nombre fechaIngreso fechaEgreso) =
-    "Estudiante {identificacion = \"" ++ identificacion ++ "\", nombre = \"" ++ nombre ++ "\", fechaIngreso = " ++ show fechaIngreso ++ ", fechaEgreso = " ++ maybe "Nothing" show fechaEgreso ++ "}"
+mostrarEstudiante (Estudiante identificacion nombre fechaIngreso fechaSalida) =
+    "Estudiante {identificacion = \"" ++ identificacion ++ "\", nombre = \"" ++ nombre ++ "\", fechaIngreso = " ++ show fechaIngreso ++ ", fechaSalida = " ++ maybe "Nothing" show fechaSalida++ "}"
 
 -- Función para listar los estudiantes en la universidad
 listarEstudiantes :: [Estudiante] -> IO ()
@@ -86,7 +86,7 @@ cicloPrincipal :: [Estudiante] -> IO ()
 cicloPrincipal estudiantes = do
     putStrLn "\nSeleccione una opción:"
     putStrLn "1. Registrar ingreso de estudiante"
-    putStrLn "2. Registrar egreso de estudiante"
+    putStrLn "2. Registrar salida de estudiante"
     putStrLn "3. Buscar estudiante por identificación"
     putStrLn "4. Listar estudiantes"
     putStrLn "5. Salir"
@@ -105,11 +105,11 @@ cicloPrincipal estudiantes = do
             cicloPrincipal estudiantesActualizados
 
         "2" -> do
-            putStrLn "Ingrese la identificación del estudiante a egresar:"
+            putStrLn "Ingrese la identificación del estudiante que sale de la universidad"
             identificacionEstudiante <- getLine
             tiempoActual <- getCurrentTime
-            let estudiantesActualizados = registrarEgreso identificacionEstudiante tiempoActual estudiantes
-            putStrLn $ "Estudiante con identificación " ++ identificacionEstudiante ++ " egresado de la universidad."
+            let estudiantesActualizados = registrarSalida identificacionEstudiante tiempoActual estudiantes
+            putStrLn $ "Estudiante con identificación " ++ identificacionEstudiante ++ " que salió de la universidad."
             guardarEstudiantes estudiantesActualizados
             cicloPrincipal estudiantesActualizados
 
@@ -134,4 +134,3 @@ cicloPrincipal estudiantes = do
         _ -> do
             putStrLn "Opción no válida. Por favor, seleccione una opción válida."
             cicloPrincipal estudiantes
-
