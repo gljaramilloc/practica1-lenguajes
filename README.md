@@ -1,4 +1,6 @@
-Practica 1 Lenguajes y paradigmas de programacion
-Integrantes:
--Gisel Lorena Jaramillo
--Julieth Jhosiris Villada
+# Práctica 1: Lenguajes y Paradigmas de Programación  
+
+## Integrantes  
+- Gisel Lorena Jaramillo  
+- Julieth Jhosiris Villada  
+
