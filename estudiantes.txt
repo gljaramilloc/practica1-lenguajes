@@ -1,2 +1,15 @@
+Estudiante {identificacion = "reuo20", nombre = "Karina Lopez", fechaIngreso = 2025-03-07 02:45:10.4226119 UTC, horaSalida = Just 2025-03-07 02:45:29.9889078 UTC}
+Estudiante {identificacion = "kuyo20", nombre = "Hector Juan", fechaIngreso = 2025-03-07 02:44:47.3401796 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "ior10", nombre = "Yeison vega", fechaIngreso = 2025-03-07 02:00:30.2607586 UTC, horaSalida = Just 2025-03-07 02:00:47.1585168 UTC}
+Estudiante {identificacion = "tur60", nombre = "wiliam suarez", fechaIngreso = 2025-03-07 02:00:09.5052695 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "ju45", nombre = "Luisa vasquez", fechaIngreso = 2025-03-07 01:44:41.0808383 UTC, horaSalida = Just 2025-03-07 01:44:58.1108851 UTC}
+Estudiante {identificacion = "gur20", nombre = "esteban duarte", fechaIngreso = 2025-03-07 01:44:21.3717487 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "ret20", nombre = "Laura perez", fechaIngreso = 2025-03-07 01:20:34.1938155 UTC, horaSalida = Just 2025-03-07 01:20:47.500669 UTC}
+Estudiante {identificacion = "jur24", nombre = "pedro arango", fechaIngreso = 2025-03-07 01:20:13.2746882 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "hyu10", nombre = "Andres orozco", fechaIngreso = 2025-03-07 01:04:43.1072216 UTC, horaSalida = Just 2025-03-07 01:05:01.8215907 UTC}
+Estudiante {identificacion = "hur45", nombre = "raul gomez", fechaIngreso = 2025-03-07 01:04:17.1635043 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "jurt45", nombre = "Carlos palacio", fechaIngreso = 2025-03-07 00:27:06.0056987 UTC, horaSalida = Just 2025-03-07 00:27:32.1280027 UTC}
+Estudiante {identificacion = "kur12", nombre = "Maria lopez", fechaIngreso = 2025-03-07 00:26:38.3088228 UTC, horaSalida = Nothing}
+Estudiante {identificacion = "juf54", nombre = "juan hernandez", fechaIngreso = 2025-03-06 23:55:20.4829004 UTC, horaSalida = Nothing}
 Estudiante {identificacion = "tyu15", nombre = "juan perez", fechaIngreso = 2025-03-06 07:59:37.7403759 UTC, horaSalida = Just 2025-03-06 08:00:19.8455186 UTC}
 Estudiante {identificacion = "gre447", nombre = "lola ruiz", fechaIngreso = 2025-03-06 07:59:18.3582953 UTC, horaSalida = Nothing}
