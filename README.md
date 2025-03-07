@@ -12,6 +12,6 @@ Este programa permite gestionar el registro de los estudiantes en una universida
 - Consultar la permanencia de los estudiantes en la universidad.
 
 ## link del video:
-
+https://drive.google.com/file/d/1HszcpEHwhWn9H3R2KwHvNxbXPWKNO_8T/view?usp=sharing 
 
 
